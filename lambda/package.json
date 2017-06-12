@@ -1,0 +1,15 @@
+{
+  "name": "cottondrop",
+  "version": "1.0.0",
+  "description": "Amazon Lambda function for shipping EC2 instance events to Elasticsearch.",
+  "readme": "Amazon Lambda function for shipping EC2 instance events to Elasticsearch.",
+  "repository": "https://github.com/ao-com/cottondrop",
+  "main": "index.js",
+  "dependencies": {
+    "elasticsearch": "^13.0.1",
+    "moment": "^2.18.1",
+    "uuid": "^3.0.1"
+  },
+  "devDependencies": {},
+  "license": "MIT"
+}
