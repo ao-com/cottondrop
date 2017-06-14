@@ -44,7 +44,8 @@ exports.handler = (event, context, callback) => {
   var state = event['state']
 
   if (instanceId && state) {
-    var dateStamp = moment().format('YYYY.MM.DD')
+    var now = moment()
+    var dateStamp = now.format('YYYY.MM.DD')
     var index = dateStampElasticIndex
       ? process.env.ELASTICSEARCH_INDEX + '-' + dateStamp
       : process.env.ELASTICSEARCH_INDEX
@@ -55,7 +56,8 @@ exports.handler = (event, context, callback) => {
       id: uuidV4(),
       body: {
         instanceId: instanceId,
-        state: state
+        state: state,
+        created: now
       }
     }, onCreateResponse)
   }
